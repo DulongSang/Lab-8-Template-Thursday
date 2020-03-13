@@ -93,4 +93,13 @@ class CityListTest {
 
         assertEquals(1, cityList.countCities());
     }
+
+    @Test
+    public void testDeleteByIndex() {
+        CityList cityList = mockCityList();
+
+        City city = cityList.removeByIndex(0);
+        assertEquals(city.getCityName(), "Edmonton");
+        assertEquals(0, cityList.countCities());
+    }
 }
