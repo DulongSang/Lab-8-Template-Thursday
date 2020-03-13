@@ -100,5 +100,6 @@ class CityListTest {
 
         City city = cityList.removeByIndex(0);
         assertEquals(city.getCityName(), "Edmonton");
+        assertEquals(0, cityList.countCities());
     }
 }

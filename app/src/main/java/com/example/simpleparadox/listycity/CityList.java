@@ -77,4 +77,17 @@ public class CityList {
     public int countCities() {
         return cities.size();
     }
+
+
+    /**
+     * @param index the index of the city to be removed
+     * @return  the removed city
+     * @throws IndexOutOfBoundsException
+     */
+    public City removeByIndex(int index) {
+        if (index >= countCities()) {
+            throw new IndexOutOfBoundsException();
+        }
+        return cities.remove(index);
+    }
 }
